@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <div className="mt-8">
+    <div>
       <Container>
         <h1 className="text-xl text-gray-800 font-semibold">All Products</h1>
 

@@ -4,7 +4,7 @@ import Container from "../container/Container";
 
 export default function Header() {
   return (
-    <nav className="bg-white shadow w-full">
+    <nav className="bg-white shadow w-full mb-8">
       <Container>
         <div className="md:h-20 h-28 flex items-center justify-between flex-wrap md:flex-nowrap">
           <Link href={"/"} className="text-indigo-500 md:order-1">

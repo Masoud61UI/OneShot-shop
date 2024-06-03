@@ -23,7 +23,7 @@ export default function ProductItem() {
           type="button"
           className="px-6 py-3 w-full mt-4 rounded-md text-gray-50 text-sm tracking-wider font-semibold border-none outline-none bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700"
         >
-          Call us
+          View more
         </button>
       </div>
     </div>
