@@ -1,4 +1,8 @@
 export interface MenuItem {
-    title: string;
-    href: string;
+  title: string;
+  href: string;
+}
+
+export interface IContainer {
+  children: React.ReactNode;
 }
