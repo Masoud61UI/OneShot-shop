@@ -6,3 +6,8 @@ export interface MenuItem {
 export interface IContainer {
   children: React.ReactNode;
 }
+
+export interface MyParams {
+  id: number;
+  name: string;
+}
