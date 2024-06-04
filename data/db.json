@@ -1,0 +1,70 @@
+{
+  "allproducts": [
+    {
+      "id": "1",
+      "title": "ANNKE 1080P",
+      "price": 24.99,
+      "description": "100ft IR Night Vision&IP66 Weatherproof : The equipped premium IR LEDs are automatically activated in low light conditions so that you can capture clear B&W vision at dawn, dust, night, on rainy days or any conditions with low light illumination. Built with IP66 weatherproof housing, the CCTV camera is able to endure whatever mother nature brings, thus keep out dust, water and air.",
+      "image": "https://m.media-amazon.com/images/I/61GeUy2UVvL._AC_UY218_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "2",
+      "title": "ZOSI 2.0MP HD",
+      "price": 22.3,
+      "description": "1080P Hybrid 4-in-1 HD-CVI/TVI/AHD/Analog : It comes with OSD Menu which can change 4 different video output TVI/AHD/HD-CVI/CVBS and adjust the video settings.(The default mode is 960H. You can change the OSD Menu by holding the button for about 5 seconds)",
+      "image": "https://m.media-amazon.com/images/I/61kKxPChMJS._AC_UY218_.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": "3",
+      "title": "ZOSI 2.0MP 1080P",
+      "price": 25.99,
+      "description": "Bulit in OSD Menu : It comes with OSD Menu which can change 4 different video output. 1080P AHD, 1080P CVI, 1080P TVI and 960H CVBS .Default Video mode is 960H mode, compatible with all analog DVRs. 1080P video mode must be switched according to your 1080P DVR type. Widely Usage: With OSD Menu, you can change signal mode freely and quickly in 5 seconds.",
+      "image": "https://m.media-amazon.com/images/I/71br6-ivLES._AC_UY218_.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": "4",
+      "title": "Anpviz Analog",
+      "price": 38.99,
+      "description": "1080P HD TVI/CVI/AHD/ 960H CVBS 4 IN 1 Analog Dome Camera : This dome camera 1080P supports 4 different video output 1080P TVI, 1080P AHD, 1080P CVI and CVBS (960H). Required 1080P/1080Lite/1080N TVI/AHD/CVI DVR ( SDI DVR not comptiabe ) ( Some 720P DVR not compatiable ) Required coaxiable BNC cable and power adapter but not included.",
+      "image": "https://m.media-amazon.com/images/I/61b1WCL-7lL._AC_UY218_.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": "5",
+      "title": "WiFi Security Camera",
+      "price": 29,
+      "description": "Mini Size for Indoor & Outdoor Use : This mini camera is not yet the size of an ID card but can used in anywhere of your home. It is wired security camera with an IP66 rating so you can confidently install it outside in the rain or inside in the kids’ room to protect your family everywhere. (*Only supports 2.4Ghz WiFi)",
+      "image": "https://m.media-amazon.com/images/I/619N4hGjrBL._AC_UY218_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": "6",
+      "title": "ZOSI 4PACK 1920TVL",
+      "price": 95.99,
+      "description": "2.0MP 1080P HD-TVI Security Camera : This is 1080P HD- TVI Bullet Camera. It compatible with 720P,1080P,5MP,4K HD-TVI analog DVRs. High performance lens captures everything in great detail and presents true-to-life color on screen",
+      "image": "https://m.media-amazon.com/images/I/71Vl9LhB3sL._AC_UY218_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    }
+  ]
+}

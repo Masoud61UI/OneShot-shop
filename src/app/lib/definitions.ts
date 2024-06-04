@@ -7,7 +7,16 @@ export interface IContainer {
   children: React.ReactNode;
 }
 
-export interface MyParams {
-  id: number;
-  name: string;
+export interface Allproduct {
+  id: string;
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+  rating: ProductRating;
+}
+
+export interface ProductRating {
+  rate: number;
+  count: number;
 }

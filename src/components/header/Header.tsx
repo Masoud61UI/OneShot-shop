@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../navbar/Navbar";
 import Container from "../container/Container";
+import { TbShoppingBag } from "react-icons/tb";
 
 export default function Header() {
   return (
@@ -26,9 +27,11 @@ export default function Header() {
           <div className="order-3 w-full md:w-auto md:order-2">
             <Navbar />
           </div>
-          <div className="order-2 md:order-3 flex items-center gap-3">
-            <Link href={"/cart"}>Cart</Link>
-            <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg flex items-center gap-2">
+          <div className="order-2 md:order-3 flex items-center gap-4">
+            <Link href={"/cart"}>
+              <TbShoppingBag className="text-xl text-gray-700 hover:text-indigo-500 transition duration-180 ease-out hover:ease-in" />
+            </Link>
+            <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg flex items-center gap-2 transition duration-180 ease-out hover:ease-in">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
