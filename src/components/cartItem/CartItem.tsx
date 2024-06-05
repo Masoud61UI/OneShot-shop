@@ -1,27 +1,33 @@
 import Image from "next/image";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { CardItem } from "@/app/lib/definitions";
+import { getProduct } from "@/services/api";
+import { Allproduct } from "@/app/lib/definitions";
 
-export default function CartItem({ id, qty }: CardItem) {
+export default async function CartItem({ id, qty }: CardItem) {
+
+  const productId = id;
+  const resultProduct: Allproduct = await getProduct(productId);
+
   return (
-    <div className="flex items-start justify-between py-6">
+    <div className="flex items-start justify-between py-8">
       <div className="flex gap-4 sm:gap-6">
-        <div className="bg-gray-100 p-2.5 rounded-md">
+        <div className="flex items-center justify-center border border-indigo-300 p-2.5 rounded-md">
           <Image
-            src="https://www.techcube.co.uk/wp-content/uploads/2017/09/cctv-camera.jpg"
-            width={160}
-            height={100}
+            src={resultProduct.image}
+            width={170}
+            height={110}
             alt="CCTV Photo"
-            className="rounded-md"
+            className="rounded-md w-[140px] h-[90px] object-contain"
           />
         </div>
 
         <div>
           <h3 className="text-sm sm:text-lg font-bold text-gray-800">
-            Product Title
+            {resultProduct.title}
           </h3>
           <p className="text-gray-500 text-xs sm:text-sm mt-0.5">CCTV</p>
-          <h3 className="text-sm font-bold text-gray-800 mt-4">$18.5</h3>
+          <h3 className="text-sm font-bold text-gray-800 mt-4"> {resultProduct.price}$</h3>
 
           <div className="flex items-center gap-3 mt-4">
             <h4 className="text-sm text-gray-800">Qty:</h4>

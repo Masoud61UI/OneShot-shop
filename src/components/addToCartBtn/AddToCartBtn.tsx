@@ -4,23 +4,11 @@ import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
 
 export default function ProductQtyBtn({ product }: any) {
   const {
-    handleDecreaseProductQty,
     handleIncreaseProductQty,
-    cartItems,
-    getProductQty,
-    handleRemoveProduct,
   } = useShoppingCartContext();
 
   const handleAddToCart = () => {
     handleIncreaseProductQty(product.id);
-  };
-
-  const handleDecreaseToCart = () => {
-    handleDecreaseProductQty(product.id);
-  };
-
-  const handleRemoveProductCard = () => {
-    handleRemoveProduct(product.id);
   };
 
   return (

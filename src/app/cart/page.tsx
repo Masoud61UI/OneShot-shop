@@ -4,6 +4,7 @@ import CartItem from "@/components/cartItem/CartItem";
 import Container from "@/components/container/Container";
 import { useShoppingCartContext } from "../ShoppingCartProvider";
 
+
 export default function page() {
   const { cartItems } = useShoppingCartContext();
 

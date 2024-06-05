@@ -4,6 +4,7 @@ import { IoPricetagOutline } from "react-icons/io5";
 import { LuStar } from "react-icons/lu";
 import { Allproduct } from "@/app/lib/definitions";
 import { getProduct } from "@/services/api";
+import AddToCartBtn from "@/components/addToCartBtn/AddToCartBtn";
 
 export default async function page({ params }: any) {
   const productId = params.id;
@@ -46,12 +47,7 @@ export default async function page({ params }: any) {
               </div>
               <p className="text-lg font-semibold">{resultProduct.price}$</p>
             </div>
-            <button
-              type="button"
-              className="px-6 py-3 w-60 rounded-lg text-gray-50 text-base tracking-wider font-medium border border-current outline-none bg-gradient-to-tr hover:bg-gradient-to-tl from-indigo-700 to-indigo-300"
-            >
-              Add to cart
-            </button>
+            <AddToCartBtn product={resultProduct} />
           </div>
         </div>
       </Container>
