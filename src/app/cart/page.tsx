@@ -13,7 +13,10 @@ export default function page() {
           <div className="lg:col-span-2 divide-y">
             <CartItem />
             <CartItem />
+            <CartItem />
+            <CartItem />
           </div>
+
           <div className="bg-gradient-to-tr from-indigo-400 via-indigo-200 to-indigo-50 rounded p-6 lg:sticky top-0">
             <h2 className="text-lg font-bold text-gray-800">Order summary</h2>
             <ul className="text-gray-800 mt-6 space-y-3">

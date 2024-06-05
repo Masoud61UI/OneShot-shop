@@ -3,7 +3,7 @@ export interface MenuItem {
   href: string;
 }
 
-export interface IContainer {
+export interface IChildren {
   children: React.ReactNode;
 }
 
@@ -19,4 +19,9 @@ export interface Allproduct {
 export interface ProductRating {
   rate: number;
   count: number;
+}
+
+export interface CardItem {
+  id: number;
+  qty: number;
 }
