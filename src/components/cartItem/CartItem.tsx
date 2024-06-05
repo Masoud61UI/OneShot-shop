@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { CardItem } from "@/app/lib/definitions";
 
-export default function CartItem() {
+export default function CartItem({ id, qty }: CardItem) {
   return (
     <div className="flex items-start justify-between py-6">
       <div className="flex gap-4 sm:gap-6">
@@ -39,7 +40,7 @@ export default function CartItem() {
                 ></path>
               </svg>
             </button>
-            <span className="font-bold text-sm leading-[16px]">2</span>
+            <span className="font-bold text-sm leading-[16px]">{qty}</span>
             <button
               type="button"
               className="flex items-center justify-center w-5 h-5 bg-blue-600 outline-none rounded-full"

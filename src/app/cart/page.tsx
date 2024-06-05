@@ -1,7 +1,12 @@
+"use client";
+
 import CartItem from "@/components/cartItem/CartItem";
 import Container from "@/components/container/Container";
+import { useShoppingCartContext } from "../ShoppingCartProvider";
 
 export default function page() {
+  const { cartItems } = useShoppingCartContext();
+
   return (
     <div className="mt-14 max-w-6xl mx-auto">
       <Container>
@@ -11,10 +16,9 @@ export default function page() {
 
         <div className="grid lg:grid-cols-3 gap-10 items-start mt-4">
           <div className="lg:col-span-2 divide-y">
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {cartItems.map((item) => (
+              <CartItem {...item} />
+            ))}
           </div>
 
           <div className="bg-gradient-to-tr from-indigo-400 via-indigo-200 to-indigo-50 rounded p-6 lg:sticky top-0">

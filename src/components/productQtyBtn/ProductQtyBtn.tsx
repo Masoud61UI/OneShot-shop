@@ -2,7 +2,7 @@
 
 import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
 
-export default function ProductAddBtn({ product }: any) {
+export default function ProductQtyBtn({ product }: any) {
   const {
     handleDecreaseProductQty,
     handleIncreaseProductQty,
