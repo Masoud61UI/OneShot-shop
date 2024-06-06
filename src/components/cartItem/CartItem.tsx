@@ -8,6 +8,7 @@ import ProductBtnRemove from "@/components/productQtyBtns/ProductBtnRemove";
 import ProductQtyBtnIncrease from "@/components/productQtyBtns/ProductQtyBtnIncrease";
 import ProductQtyBtnDecrease from "@/components/productQtyBtns/ProductQtyBtnDecrease";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function CartItem({ id, qty }: CardItem) {
   const [product, setProduct] = useState<Allproduct>();
@@ -20,7 +21,7 @@ export default function CartItem({ id, qty }: CardItem) {
   return (
     <div className="flex items-start justify-between py-8">
       <div className="flex gap-4 sm:gap-6">
-        <div className="flex items-center justify-center border border-indigo-300 p-2.5 rounded-md">
+        <Link href={`/products/${id}`} className="flex items-center justify-center border border-indigo-300 p-2.5 rounded-md">
           <Image
             src={product?.image ?? ""}
             width={170}
@@ -28,12 +29,14 @@ export default function CartItem({ id, qty }: CardItem) {
             alt="CCTV Photo"
             className="rounded-md w-[140px] h-[90px] object-contain"
           />
-        </div>
+        </Link>
 
         <div>
-          <h3 className="text-sm sm:text-lg font-bold text-gray-800">
-            {product?.title}
-          </h3>
+          <Link href={`/products/${id}`}>
+            <h3 className="text-sm sm:text-lg font-bold text-gray-800">
+              {product?.title}
+            </h3>
+          </Link>
           <p className="text-gray-500 text-xs sm:text-sm mt-0.5">CCTV</p>
           <h3 className="text-sm font-bold text-gray-800 mt-4">
             {" "}
