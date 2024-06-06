@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useState, useContext } from "react";
+import { createContext, useContext } from "react";
 import { CardItem, IChildren } from "@/app/lib/definitions";
+import { useLocalStorage } from "./lib/useLocalStorage";
 
 interface ShoppingCartContexts {
   cartItems: CardItem[];
@@ -19,7 +20,7 @@ export const useShoppingCartContext = () => {
 };
 
 export function ShoppingCartProvider({ children }: IChildren) {
-  const [cartItems, setCartItems] = useState<CardItem[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CardItem[]>( "cartItems" ,[]);
 
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currentItem) => {
