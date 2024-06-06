@@ -1,20 +1,28 @@
+"use client";
+
 import Image from "next/image";
-import { RiDeleteBin5Line } from "react-icons/ri";
 import { CardItem } from "@/app/lib/definitions";
 import { getProduct } from "@/services/api";
 import { Allproduct } from "@/app/lib/definitions";
+import ProductBtnRemove from "@/components/productQtyBtns/ProductBtnRemove";
+import ProductQtyBtnIncrease from "@/components/productQtyBtns/ProductQtyBtnIncrease";
+import ProductQtyBtnDecrease from "@/components/productQtyBtns/ProductQtyBtnDecrease";
+import { useEffect, useState } from "react";
 
-export default async function CartItem({ id, qty }: CardItem) {
+export default function CartItem({ id, qty }: CardItem) {
+  const [product, setProduct] = useState<Allproduct>();
+  console.log(product);
 
-  const productId = id;
-  const resultProduct: Allproduct = await getProduct(productId);
+  useEffect(() => {
+    getProduct(id).then((data) => setProduct(data));
+  }, []);
 
   return (
     <div className="flex items-start justify-between py-8">
       <div className="flex gap-4 sm:gap-6">
         <div className="flex items-center justify-center border border-indigo-300 p-2.5 rounded-md">
           <Image
-            src={resultProduct.image}
+            src={product?.image ?? ""}
             width={170}
             height={110}
             alt="CCTV Photo"
@@ -24,49 +32,24 @@ export default async function CartItem({ id, qty }: CardItem) {
 
         <div>
           <h3 className="text-sm sm:text-lg font-bold text-gray-800">
-            {resultProduct.title}
+            {product?.title}
           </h3>
           <p className="text-gray-500 text-xs sm:text-sm mt-0.5">CCTV</p>
-          <h3 className="text-sm font-bold text-gray-800 mt-4"> {resultProduct.price}$</h3>
+          <h3 className="text-sm font-bold text-gray-800 mt-4">
+            {" "}
+            {product?.price}$
+          </h3>
 
           <div className="flex items-center gap-3 mt-4">
             <h4 className="text-sm text-gray-800">Qty:</h4>
-            <button
-              type="button"
-              className="flex items-center justify-center w-5 h-5 border border-indigo-500 outline-none rounded-full"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-2 fill-indigo-500"
-                viewBox="0 0 124 124"
-              >
-                <path
-                  d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z"
-                  data-original="#000000"
-                ></path>
-              </svg>
-            </button>
+            <ProductQtyBtnDecrease product={product} />
             <span className="font-bold text-sm leading-[16px]">{qty}</span>
-            <button
-              type="button"
-              className="flex items-center justify-center w-5 h-5 bg-blue-600 outline-none rounded-full"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-2 fill-white"
-                viewBox="0 0 42 42"
-              >
-                <path
-                  d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z"
-                  data-original="#000000"
-                ></path>
-              </svg>
-            </button>
+            <ProductQtyBtnIncrease product={product} />
           </div>
         </div>
       </div>
 
-      <RiDeleteBin5Line className="text-xl fill-red-500 inline cursor-pointer" />
+      <ProductBtnRemove product={product} />
     </div>
   );
 }

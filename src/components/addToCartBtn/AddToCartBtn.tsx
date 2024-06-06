@@ -2,17 +2,15 @@
 
 import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
 
-export default function ProductQtyBtn({ product }: any) {
-  const {
-    handleIncreaseProductQty,
-  } = useShoppingCartContext();
+export default function AddToCartBtn({ product }: any) {
+  const { handleIncreaseProductQty } = useShoppingCartContext();
 
   const handleAddToCart = () => {
     handleIncreaseProductQty(product.id);
   };
 
   return (
-    <div className="flex gap-4">
+    <>
       <button
         type="button"
         onClick={handleAddToCart}
@@ -20,6 +18,6 @@ export default function ProductQtyBtn({ product }: any) {
       >
         Add to cart
       </button>
-    </div>
+    </>
   );
 }
