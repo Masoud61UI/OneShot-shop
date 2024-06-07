@@ -15,3 +15,16 @@ export async function getProduct(id: string | number) {
 
   return data;
 }
+
+export async function logIn(username: string, password: string) {
+  const { data } = await apiUrl({
+    method: "POST",
+    url: "/login",
+    data: {
+      username,
+      password,
+    },
+  });
+
+  return data;
+}

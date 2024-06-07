@@ -1,8 +1,10 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { CardItem, IChildren } from "@/app/lib/definitions";
 import { useLocalStorage } from "./lib/useLocalStorage";
+import { logIn } from "@/services/api";
+import { redirect } from "next/navigation";
 
 interface ShoppingCartContexts {
   cartItems: CardItem[];
@@ -11,6 +13,9 @@ interface ShoppingCartContexts {
   getProductQty: (id: number) => number;
   handleRemoveProduct: (id: number) => void;
   cartQty: number;
+  isLogin: boolean;
+  handleLogIn: (username: string, password: string) => void;
+  handleLogOut: () => void;
 }
 
 export const ShoppingCartContext = createContext({} as ShoppingCartContexts);
@@ -20,7 +25,10 @@ export const useShoppingCartContext = () => {
 };
 
 export function ShoppingCartProvider({ children }: IChildren) {
-  const [cartItems, setCartItems] = useLocalStorage<CardItem[]>( "cartItems" ,[]);
+  const [cartItems, setCartItems] = useLocalStorage<CardItem[]>(
+    "cartItems",
+    []
+  );
 
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currentItem) => {
@@ -68,6 +76,35 @@ export function ShoppingCartProvider({ children }: IChildren) {
 
   const cartQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
 
+  const [isLogin, setIsLogin] = useState(false);
+
+  const handleLogIn = (username: string, password: string) => {
+    logIn(username, password).finally(() => {
+      // "I used finally instead of then, because I didn't have an API."
+
+      let token = "dfjkvlsnvvlkdfvldmfvvlfdnvldkfnvldfvfdhbgdughfuiehrifvuhs";
+      localStorage.setItem("token", token);
+      // And I know I have to save it in a cookie :)
+
+      setIsLogin(true);
+      redirect("/");
+    });
+  };
+
+  const handleLogOut = () => {
+    setIsLogin(false);
+    localStorage.removeItem("token");
+    redirect("/login");
+  };
+
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+
+    if (token) {
+      setIsLogin(true);
+    }
+  }, []);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -77,6 +114,9 @@ export function ShoppingCartProvider({ children }: IChildren) {
         getProductQty,
         handleRemoveProduct,
         cartQty,
+        isLogin,
+        handleLogIn,
+        handleLogOut,
       }}
     >
       {children}

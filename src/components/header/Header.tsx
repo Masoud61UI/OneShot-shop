@@ -7,8 +7,11 @@ import { TbShoppingBag } from "react-icons/tb";
 import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
 
 export default function Header() {
-  const { cartQty } = useShoppingCartContext();
-  
+  const { cartQty, handleLogIn, handleLogOut, isLogin } =
+    useShoppingCartContext();
+
+  const isLoggedIn = isLogin;
+
   return (
     <nav className="bg-white shadow w-full mb-8">
       <Container>
@@ -39,20 +42,26 @@ export default function Header() {
                 {cartQty}
               </span>
             </Link>
-            <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg flex items-center gap-2 transition duration-180 ease-out hover:ease-in">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="text-sm font-medium">Login</span>
+            <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg transition duration-180 ease-out hover:ease-in text-sm font-medium">
+              {isLoggedIn ? (
+                <div onClick={handleLogOut}>Log Out</div>
+              ) : (
+                <Link className="flex items-center gap-2" href="/login">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Login</span>
+                </Link>
+              )}
             </button>
           </div>
         </div>
