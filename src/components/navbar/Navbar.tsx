@@ -8,7 +8,6 @@ const menuItems: MenuItem[] = [
   { title: "Home", href: "/" },
   { title: "Products", href: "/products" },
   { title: "About us", href: "/about" },
-  { title: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

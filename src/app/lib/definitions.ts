@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface MenuItem {
   title: string;
   href: string;
@@ -24,4 +26,10 @@ export interface ProductRating {
 export interface CardItem {
   id: number;
   qty: number;
+}
+
+export interface featureItem {
+  title: string;
+  desc: string;
+  icon: any;
 }

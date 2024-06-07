@@ -1,7 +1,19 @@
-export default function Home() {
+import Container from "@/components/container/Container";
+import HomeHeader from "@/components/homeHeader/HomeHeader";
+import OurFeature from "@/components/ourFeature/OurFeature";
+
+export default async function Home() {
+
   return (
     <main>
-      Home
+      <Container>
+        <section>
+          <div className="text-[#fff] pt-6">
+            <HomeHeader/>
+            <OurFeature/>
+          </div>
+        </section>
+      </Container>
     </main>
   );
 }

@@ -65,6 +65,28 @@
         "rate": 3.9,
         "count": 70
       }
+    },
+    {
+      "id": "7",
+      "title": "All-new Blink Mini",
+      "price": 85.99,
+      "description": "See and speak from the Blink app — Experience 1080p HD live view, night view in color with a built-in spotlight, a wider field of view, and crisp two-way audio. Stream live video continuously for up to 90 minutes with a Blink Subscription Plan (sold separately).",
+      "image": "https://m.media-amazon.com/images/I/31tp0vzZwRL._SX425_.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 70
+      }
+    },
+    {
+      "id": "8",
+      "title": "Blink Outdoor CCTV",
+      "price": 40.97,
+      "description": "Save and share clips — Choose to store events in the cloud with a free 30-day trial of the Blink Subscription Plan or locally with the Sync Module 2 (included) plus a USB drive (sold separately).",
+      "image": "https://m.media-amazon.com/images/I/41hbmiP+77L._SX425_.jpg",
+      "rating": {
+        "rate": 3.7,
+        "count": 70
+      }
     }
   ]
 }
