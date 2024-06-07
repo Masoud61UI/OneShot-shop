@@ -18,13 +18,13 @@ interface ShoppingCartContexts {
   handleLogOut: () => void;
 }
 
-export const ShoppingCartContext = createContext({} as ShoppingCartContexts);
+export const Providers = createContext({} as ShoppingCartContexts);
 
 export const useShoppingCartContext = () => {
-  return useContext(ShoppingCartContext);
+  return useContext(Providers);
 };
 
-export function ShoppingCartProvider({ children }: IChildren) {
+export function Provider({ children }: IChildren) {
   const [cartItems, setCartItems] = useLocalStorage<CardItem[]>(
     "cartItems",
     []
@@ -106,7 +106,7 @@ export function ShoppingCartProvider({ children }: IChildren) {
   }, []);
 
   return (
-    <ShoppingCartContext.Provider
+    <Providers.Provider
       value={{
         cartItems,
         handleIncreaseProductQty,
@@ -120,6 +120,6 @@ export function ShoppingCartProvider({ children }: IChildren) {
       }}
     >
       {children}
-    </ShoppingCartContext.Provider>
+    </Providers.Provider>
   );
 }

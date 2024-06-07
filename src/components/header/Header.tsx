@@ -4,10 +4,10 @@ import Link from "next/link";
 import Navbar from "../navbar/Navbar";
 import Container from "../container/Container";
 import { TbShoppingBag } from "react-icons/tb";
-import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
+import { useShoppingCartContext } from "@/app/Provider";
 
 export default function Header() {
-  const { cartQty, handleLogIn, handleLogOut, isLogin } =
+  const { cartQty, handleLogOut, isLogin } =
     useShoppingCartContext();
 
   const isLoggedIn = isLogin;

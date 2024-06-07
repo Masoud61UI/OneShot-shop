@@ -1,6 +1,6 @@
 "use client";
 
-import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
+import { useShoppingCartContext } from "@/app/Provider";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 export default function ProductBtnRemove({ product }: any) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
+import { useShoppingCartContext } from "@/app/Provider";
 
 export default function ProductQtyBtnIncrease({ product }: any) {
   const { handleIncreaseProductQty } = useShoppingCartContext();

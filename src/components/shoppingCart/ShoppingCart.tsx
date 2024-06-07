@@ -2,7 +2,7 @@
 
 import CartItem from "@/components/cartItem/CartItem";
 import Container from "@/components/container/Container";
-import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
+import { useShoppingCartContext } from "@/app/Provider";
 import LoginCart from "@/app/cart/@login/page";
 
 export default function ShoppingCart() {

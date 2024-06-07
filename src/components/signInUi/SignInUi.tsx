@@ -1,6 +1,6 @@
 "use client";
 
-import { useShoppingCartContext } from "@/app/ShoppingCartProvider";
+import { useShoppingCartContext } from "@/app/Provider";
 import Container from "@/components/container/Container";
 import { redirect } from "next/navigation";
 import { useState } from "react";
