@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center py-5 bg-[#08355e]">
+      <div className="text-center py-5 bg-indigo-900">
         <p className="text-gray-300 text-sm">
           © 2023
           <Link className="mx-1" href={"/"}>
