@@ -20,7 +20,7 @@ export default function ProductItem({
       <div className="px-2 my-4">
         <div className="flex justify-between gap-2">
           <h3 className="text-base text-gray-800 font-semibold">{title}</h3>
-          <span className="text-base text-orange-700 font-semibold">
+          <span className="text-base text-orange-600 font-semibold">
             {price}$
           </span>
         </div>

@@ -33,3 +33,9 @@ export interface featureItem {
   desc: string;
   icon: any;
 }
+
+export interface stateItem {
+  title: string;
+  amount: string;
+  unit: string;
+}

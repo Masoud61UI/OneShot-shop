@@ -9,7 +9,7 @@ export default function AboutUs() {
           <h2 className="text-3xl font-bold">
             Your Destination for Unique and Exclusive Products
           </h2>
-          <p className="mt-4 text-base text-gray-500">
+          <p className="mt-4 mb-8 text-base text-gray-500">
             Established in 2024, OneShot caters to individuals seeking
             distinctive and one-of-a-kind items. We are passionate about
             providing high-quality products at affordable prices, ensuring a
@@ -18,9 +18,9 @@ export default function AboutUs() {
             lookout for the latest and most unique products to add to our
             collection.
           </p>
-          <button className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg transition duration-180 ease-out hover:ease-in text-sm font-medium mt-8">
-            <Link href={"/about"}>About us</Link>
-          </button>
+          <Link href={"/about"} className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-lg transition duration-180 ease-out hover:ease-in text-sm font-medium">
+            About us
+          </Link>
         </div>
         <Image
           src={
