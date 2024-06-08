@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function HomeHeader() {
   return (
-    <div className="grid lg:grid-cols-2 items-center gap-y-6 bg-blue-500 rounded-xl">
+    <div className="grid lg:grid-cols-2 items-center gap-y-6 bg-indigo-500 rounded-xl">
       <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4">
         <h2 className="lg:text-5xl text-3xl font-bold mb-4 lg:!leading-[56px]">
-          OneShot, Quality Products, Unbeatable Prices
+          <span className="text-orange-300">OneShot</span>, Quality Products, Unbeatable Prices
         </h2>
         <p className="mt-4 mb-9 text-base leading-relaxed">
           Step out of the ordinary and discover one-of-a-kind products that will

@@ -7,8 +7,7 @@ import { TbShoppingBag } from "react-icons/tb";
 import { useShoppingCartContext } from "@/app/Provider";
 
 export default function Header() {
-  const { cartQty, handleLogOut, isLogin } =
-    useShoppingCartContext();
+  const { cartQty, handleLogOut, isLogin } = useShoppingCartContext();
 
   const isLoggedIn = isLogin;
 
@@ -16,7 +15,10 @@ export default function Header() {
     <nav className="bg-white shadow w-full mb-8">
       <Container>
         <div className="md:h-20 h-28 flex items-center justify-between flex-wrap md:flex-nowrap">
-          <Link href={"/"} className="text-indigo-500 md:order-1">
+          <Link
+            href={"/"}
+            className="flex items-center gap-1 text-indigo-500 md:order-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -31,6 +33,9 @@ export default function Header() {
                 d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
               />
             </svg>
+            <h3 className="text-xl font-semibold">
+              <span className="text-orange-500">One</span>Shot
+            </h3>
           </Link>
           <div className="order-3 w-full md:w-auto md:order-2">
             <Navbar />
@@ -38,7 +43,7 @@ export default function Header() {
           <div className="order-2 md:order-3 flex items-center gap-6">
             <Link className="relative" href={"/cart"}>
               <TbShoppingBag className="text-[21px] text-gray-700 hover:text-indigo-500 transition duration-180 ease-out hover:ease-in" />
-              <span className="absolute w-4 h-4 text-[11px] text-gray-50 bg-indigo-500 flex justify-center items-center rounded-full top-[-7px] right-[-8px]">
+              <span className="absolute w-4 h-4 text-[11px] text-gray-50 bg-orange-600 flex justify-center items-center rounded-full top-[-7px] right-[-8px]">
                 {cartQty}
               </span>
             </Link>

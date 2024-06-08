@@ -34,7 +34,7 @@ export default function OurFeature() {
         const ItemsIcon = items.icon;
         return (
           <div key={items.title} className="bg-gray-100 p-6 rounded-md">
-            <div className="w-12 h-12 flex items-center justify-center mb-4 text-indigo-500 bg-white rounded-md">
+            <div className="w-12 h-12 flex items-center justify-center mb-4 text-orange-500 bg-white rounded-md">
               <ItemsIcon className="text-[26px]" />
             </div>
             <h3 className="text-xl font-bold mb-2 text-[#333]">
