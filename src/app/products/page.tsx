@@ -8,7 +8,7 @@ export default async function page() {
   const resultProducts: Allproduct[] = await getProducts();
 
   return (
-    <div>
+    <div className="mt-16">
       <Container>
         <h1 className="text-xl text-gray-800 font-semibold">All Products</h1>
 

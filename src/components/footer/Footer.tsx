@@ -4,7 +4,7 @@ import FooterSocialMedia from "./@footerSocialMedia/FooterSocialMedia";
 
 export default function Footer() {
   return (
-    <footer className="bg-indigo-500 tracking-wide">
+    <footer className="bg-indigo-500 tracking-wide mt-24">
       <div className="pt-14 pb-20 px-6 sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">

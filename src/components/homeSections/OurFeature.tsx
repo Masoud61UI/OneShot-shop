@@ -29,7 +29,7 @@ const featureItems: featureItem[] = [
 
 export default function OurFeature() {
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 px-4 my-16">
+    <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 px-4 my-20">
       {featureItems.map((items) => {
         const ItemsIcon = items.icon;
         return (
