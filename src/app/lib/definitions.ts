@@ -39,3 +39,12 @@ export interface stateItem {
   amount: string;
   unit: string;
 }
+
+export interface InputItem {
+  label: string;
+  changehandle: React.ChangeEventHandler<HTMLInputElement>;
+  name: string;
+  type: React.HTMLInputTypeAttribute;
+  value: string | number | readonly string[];
+  placeholder: string;
+}
